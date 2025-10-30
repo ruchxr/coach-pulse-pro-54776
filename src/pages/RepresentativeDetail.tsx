@@ -163,7 +163,7 @@ const RepresentativeDetail = () => {
           <section>
             <div className="flex items-center gap-2 mb-4">
               <CheckCircle className="w-6 h-6 text-success" />
-              <h2 className="text-2xl font-bold">Coaching Insights</h2>
+              <h2 className="text-2xl font-bold">Your Coaching Notes</h2>
             </div>
             <div className="w-full">
               {repDetail.strengths.map((insight) => (

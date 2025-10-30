@@ -195,18 +195,6 @@ const RepresentativeDetail = () => {
                   </CardHeader>
                   <CardContent className="pb-0 space-y-3">
                     <p className="text-sm text-muted-foreground">{insight.description_2}</p>
-                    {/* {insight.metrics.map((metric, idx) => (
-                      <div key={idx} className="space-y-1">
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-medium">{metric.label}</span>
-                          {metric.trend && getTrendIcon(metric.trend)}
-                        </div>
-                        <p className="text-lg font-bold text-success">{metric.value}</p>
-                        {metric.comparison && (
-                          <p className="text-xs text-muted-foreground">{metric.comparison}</p>
-                        )}
-                      </div>
-                    ))} */}
                   </CardContent>
                   <CardHeader>
                     <div className="flex items-start justify-between gap-2">

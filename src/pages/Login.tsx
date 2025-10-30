@@ -54,7 +54,7 @@ const Login = () => {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-4 text-center">
           <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-            <BarChart3 className="w-7 h-7 text-primary-foreground" />
+              <img src="https://cdn4.iconfinder.com/data/icons/superhero/400/superman.png" className="w-15 h-15 text-foreground" />
           </div>
           <div>
             <CardTitle className="text-2xl">SuperCoach-M</CardTitle>

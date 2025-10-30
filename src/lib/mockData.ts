@@ -3,80 +3,69 @@ import { Representative, RepresentativeDetail } from '@/types';
 export const mockRepresentatives: Representative[] = [
   {
     id: '1',
-    name: 'Sarah Johnson',
-    territory: 'Northeast Region',
-    salesAchievement: 118,
-    activityCompletion: 95,
+    name: 'Jennifer Hilton',
+    territory: 'Seattle-WA',
+    salesAchievement: 229,
+    activityCompletion: 80,
     crmQualityScore: 92,
     status: 'green',
     tenure: 4.5,
-    targetCoverage: 98
+    targetCoverage: 85
   },
   {
     id: '2',
-    name: 'Michael Chen',
-    territory: 'West Coast',
-    salesAchievement: 87,
-    activityCompletion: 78,
+    name: 'Alba Balice',
+    territory: 'San Francisco-CA',
+    salesAchievement: 136,
+    activityCompletion: 56,
     crmQualityScore: 85,
     status: 'yellow',
     tenure: 2.8,
-    targetCoverage: 82
+    targetCoverage: 65
   },
   {
     id: '3',
-    name: 'Emily Rodriguez',
-    territory: 'Southeast',
-    salesAchievement: 105,
-    activityCompletion: 88,
+    name: 'Joseph Wilkes',
+    territory: 'Los Angeles-CA',
+    salesAchievement: 136,
+    activityCompletion: 69,
     crmQualityScore: 90,
     status: 'green',
     tenure: 3.2,
-    targetCoverage: 94
+    targetCoverage: 70
   },
   {
     id: '4',
-    name: 'David Thompson',
-    territory: 'Midwest',
-    salesAchievement: 72,
-    activityCompletion: 65,
+    name: 'Grant Hein',
+    territory: 'San Diego-CA',
+    salesAchievement: 176,
+    activityCompletion: 77,
     crmQualityScore: 68,
     status: 'red',
     tenure: 1.5,
-    targetCoverage: 71
+    targetCoverage: 73
   },
   {
     id: '5',
-    name: 'Lisa Park',
-    territory: 'Southwest',
-    salesAchievement: 112,
-    activityCompletion: 91,
+    name: 'Joe Tonda',
+    territory: 'Sacramento-CA',
+    salesAchievement: 159,
+    activityCompletion: 72,
     crmQualityScore: 88,
     status: 'green',
     tenure: 5.1,
-    targetCoverage: 96
+    targetCoverage: 70
   },
   {
     id: '6',
-    name: 'James Wilson',
-    territory: 'Mountain States',
-    salesAchievement: 94,
-    activityCompletion: 83,
+    name: 'Robert Jenkins',
+    territory: 'Orange County-CA',
+    salesAchievement: 206,
+    activityCompletion: 78,
     crmQualityScore: 79,
     status: 'yellow',
     tenure: 3.7,
-    targetCoverage: 87
-  },
-  {
-    id: '7',
-    name: 'Amanda Foster',
-    territory: 'Mid-Atlantic',
-    salesAchievement: 108,
-    activityCompletion: 89,
-    crmQualityScore: 91,
-    status: 'green',
-    tenure: 4.0,
-    targetCoverage: 93
+    targetCoverage: 74
   }
 ];
 
@@ -90,47 +79,23 @@ export const getRepresentativeDetails = (id: string): RepresentativeDetail | nul
       strengths: [
         {
           id: 's1',
-          title: 'Exceptional High-Value Account Engagement',
-          description: 'Maintains consistent meeting frequency with top accounts, significantly above team average.',
+          title_1: "What's working well ",
+          description_1: 'Jennifer, first off, I want to acknowledge your strong performance in maintaining Hemora sales across the Seattle territory. Despite fluctuations across the West region, you have shown consistent strength and discipline in driving results. Your total sales of 229.9 units are 31.7% above the regional average, which is a commendable achievement. The steady growth from 33 units in January to 42.9 units in May, an increase of 30%, highlights your ability to build lasting customer relationships and translate effort into tangible outcomes.',
+          title_2: 'What could be different',
+          description_2: 'I also noticed a slight dip in June sales, from 42.9 to 35.2 units, which presents an opportunity to sustain momentum through the later months of the quarter. Expanding your call reach by around 10–15% and maintaining follow-up cadence with emerging accounts can help stabilize growth and maintain consistency. This focus on proactive engagement will ensure your territory continues to perform strongly even when market dynamics shift.',
+          title_3: 'Forward-looking suggestions',
+          description_3: 'You have set a solid standard for performance within the West region, and your dedication is clearly paying off. As you continue to build on this foundation, maintaining a balance between nurturing established accounts and expanding outreach to newer prescribers will be key. I am confident that with your focus and consistency, you will continue to excel, and I am here to support you every step of the way.',
           metrics: [
             { label: 'Top 10 Account Meetings', value: '95%', comparison: 'Team avg: 72%', trend: 'up' }
           ],
           dataSource: 'Activity'
-        },
-        {
-          id: 's2',
-          title: 'Superior Territory Coverage',
-          description: 'Excellent geographic distribution and account reach across assigned territory.',
-          metrics: [
-            { label: 'Territory Coverage', value: '98%', comparison: 'Target: 90%', trend: 'stable' }
-          ],
-          dataSource: 'Activity'
-        },
-        {
-          id: 's3',
-          title: 'Outstanding CRM Data Quality',
-          description: 'Comprehensive and timely documentation of customer interactions.',
-          metrics: [
-            { label: 'Data Completeness', value: '92%', comparison: 'Team avg: 78%', trend: 'up' }
-          ],
-          dataSource: 'CRM'
         }
       ],
       improvements: [],
-      suggestions: [
-        {
-          id: 'sg1',
-          title: 'Mentor New Team Members',
-          action: 'Schedule shadowing sessions with David Thompson to share best practices.',
-          expectedOutcome: 'Elevate team performance and strengthen territory coverage strategies.',
-          priority: 'medium',
-          rationale: 'Sarah\'s exceptional results make her ideal for peer coaching.',
-          timeframe: 'Next 30 days'
-        }
-      ],
+      suggestions: [],
       activityData: {
         callFrequency: 42,
-        territoryCoverage: 98,
+        territoryCoverage: 85,
         meetingTypes: [
           { type: 'In-Person', count: 28 },
           { type: 'Virtual', count: 14 }
@@ -160,58 +125,23 @@ export const getRepresentativeDetails = (id: string): RepresentativeDetail | nul
       strengths: [
         {
           id: 's1',
-          title: 'Strong Digital Tool Adoption',
-          description: 'Early adopter of new CRM features and digital engagement tools.',
+          title_1: "What's working well ",
+          description_1: 'Alba, first off, I want to acknowledge your steady progress in building Hemora performance across the San Francisco territory. Your total sales of 136.4 units are 22% below the regional average, but your trajectory shows meaningful improvement. Sales have grown from 16.5 units in January to 24.2 units in June, marking a 47% increase over six months. This reflects your focused effort in establishing prescriber relationships and gradually strengthening territory engagement.',
+          title_2: 'What could be different',
+          description_2: 'While the upward momentum is encouraging, there is an opportunity to drive greater consistency through the mid-quarter months. Sales stabilized during April and May, indicating that a few additional touchpoints could make a significant difference. Expanding your call coverage and sampling activity by 10–12% can help you convert more emerging accounts into regular prescribers and lift overall performance toward the regional average.',
+          title_3: 'Forward-looking suggestions',
+          description_3: 'You are building a solid foundation in your territory, and your progress is moving in the right direction. By maintaining your focus and continuing to expand your engagement base, you can accelerate your momentum and close the performance gap within the West region. I am confident that with your persistence and commitment, you will continue to strengthen your results, and I am here to support you throughout this journey.',
           metrics: [
-            { label: 'Digital Tool Usage', value: '88%', comparison: 'Team avg: 65%', trend: 'up' }
-          ],
-          dataSource: 'CRM'
-        }
-      ],
-      improvements: [
-        {
-          id: 'i1',
-          title: 'Below-Target Sales Achievement',
-          description: 'Current sales performance is 13% below quarterly target.',
-          metrics: [
-            { label: 'Sales vs Target', value: '87%', comparison: 'Target: 100%', trend: 'down' }
-          ],
-          dataSource: 'Sales'
-        },
-        {
-          id: 'i2',
-          title: 'Inconsistent Call Frequency',
-          description: 'Call activity has declined in the past two months.',
-          metrics: [
-            { label: 'Monthly Calls', value: '28', comparison: 'Team avg: 35', trend: 'down' }
+            { label: 'Top 10 Account Meetings', value: '95%', comparison: 'Team avg: 72%', trend: 'up' }
           ],
           dataSource: 'Activity'
         }
       ],
-      suggestions: [
-        {
-          id: 'sg1',
-          title: 'Increase Focus on Specialty Segment',
-          action: 'Reallocate 20% of calls from low-potential to high-potential specialty accounts.',
-          expectedOutcome: 'Improve sales achievement by targeting higher-value opportunities.',
-          priority: 'high',
-          rationale: 'Specialty segment shows stronger conversion rates in territory.',
-          timeframe: 'Next 60 days',
-          resources: 'Specialty product training materials'
-        },
-        {
-          id: 'sg2',
-          title: 'Enhance Call Planning Discipline',
-          action: 'Implement weekly call planning sessions using territory analytics.',
-          expectedOutcome: 'Increase call frequency to team average and improve account prioritization.',
-          priority: 'high',
-          rationale: 'Data shows gaps in coverage of mid-tier accounts.',
-          timeframe: 'Immediate'
-        }
-      ],
+      improvements: [],
+      suggestions: [],
       activityData: {
         callFrequency: 28,
-        territoryCoverage: 82,
+        territoryCoverage: 65,
         meetingTypes: [
           { type: 'In-Person', count: 16 },
           { type: 'Virtual', count: 12 }
@@ -241,48 +171,23 @@ export const getRepresentativeDetails = (id: string): RepresentativeDetail | nul
       strengths: [
         {
           id: 's1',
-          title: 'Excellent Customer Relationship Scores',
-          description: 'Consistently high satisfaction ratings from key accounts.',
+          title_1: "What's working well ",
+          description_1: 'Joseph, first off, I want to acknowledge your ongoing efforts in driving Hemora growth across the Los Angeles territory. Your total sales of 136.75 units are 21.5% below the West region average, but you have shown steady improvement through the first half of the year. From January to March, you delivered a 17.4% increase, and by May your performance was 10.3% higher than at the start of the year, reflecting a strong foundation built on consistent prescriber engagement.',
+          title_2: 'What could be different',
+          description_2: 'June showed a modest 5.3% decline compared to May, which highlights an opportunity to keep momentum consistent throughout the quarter. Expanding call coverage and sampling reach by about 10% could help balance performance and maintain continuity with both established and developing accounts. Strengthening follow-up rhythm after each interaction will also help convert engagement into sustained prescriptions.',
+          title_3: 'Forward-looking suggestions',
+          description_3: 'Your focus and discipline are evident in how you’ve managed your territory so far. The progress you’ve made sets a strong base to build on, and maintaining steady engagement will be key to narrowing the performance gap within the West region. I’m confident that with your continued focus and effort, you’ll see stronger growth ahead, and I’m here to support you every step of the way',
           metrics: [
-            { label: 'Customer Satisfaction', value: '4.8/5', comparison: 'Team avg: 4.2/5', trend: 'stable' }
+            { label: 'Top 10 Account Meetings', value: '95%', comparison: 'Team avg: 72%', trend: 'up' }
           ],
-          dataSource: 'CRM'
-        },
-        {
-          id: 's2',
-          title: 'Strong Product Mix Performance',
-          description: 'Balanced achievement across all product lines.',
-          metrics: [
-            { label: 'Product Mix Index', value: '105%', comparison: 'Target: 100%', trend: 'up' }
-          ],
-          dataSource: 'Sales'
+          dataSource: 'Activity'
         }
       ],
-      improvements: [
-        {
-          id: 'i1',
-          title: 'Opportunity for New Account Development',
-          description: 'Focus primarily on existing accounts with limited new business generation.',
-          metrics: [
-            { label: 'New Account Revenue', value: '12%', comparison: 'Team avg: 22%', trend: 'stable' }
-          ],
-          dataSource: 'Sales'
-        }
-      ],
-      suggestions: [
-        {
-          id: 'sg1',
-          title: 'Develop New Account Strategy',
-          action: 'Dedicate 15% of weekly activities to prospecting new accounts in underserved segments.',
-          expectedOutcome: 'Increase new business contribution and reduce dependency on existing accounts.',
-          priority: 'medium',
-          rationale: 'Strong relationship skills can translate to new account success.',
-          timeframe: 'Next 90 days'
-        }
-      ],
+      improvements: [],
+      suggestions: [],
       activityData: {
         callFrequency: 38,
-        territoryCoverage: 94,
+        territoryCoverage: 70,
         meetingTypes: [
           { type: 'In-Person', count: 26 },
           { type: 'Virtual', count: 12 }
@@ -312,76 +217,23 @@ export const getRepresentativeDetails = (id: string): RepresentativeDetail | nul
       strengths: [
         {
           id: 's1',
-          title: 'Positive Trend in Recent Weeks',
-          description: 'Showing improvement in activity levels over the past month.',
+          title_1: "What's working well ",
+          description_1: 'Grant, first off, I want to acknowledge your consistent contributions to Hemora’s performance across the San Diego territory. Your total sales of 176.46 units are slightly above the West region average, showing steady engagement and strong account relationships. From January to March, you achieved a 37.7% increase in sales, which highlights your focus on building momentum early in the year and maintaining consistent execution with key prescribers.',
+          title_2: 'What could be different',
+          description_2: 'While May showed a strong close at 32.9 units, June dipped by around 20%, presenting an opportunity to sustain performance through better balance between top and mid-tier accounts. Expanding your call reach by about 10–12% and maintaining regular sampling with secondary accounts can help drive a more even trend across months. This consistency will ensure your territory remains among the region’s steady performers.',
+          title_3: 'Forward-looking suggestions',
+          description_3: 'You have established a solid foundation with clear potential for continued growth. By maintaining a rhythm of engagement and strengthening relationships across a wider base of prescribers, you can convert early-year momentum into sustained success. I am confident that with your dedication and focus, you will continue to deliver strong results, and I am here to support you as you build on this progress.',
           metrics: [
-            { label: 'Activity Growth', value: '+18%', comparison: 'vs. previous month', trend: 'up' }
+            { label: 'Top 10 Account Meetings', value: '95%', comparison: 'Team avg: 72%', trend: 'up' }
           ],
           dataSource: 'Activity'
         }
       ],
-      improvements: [
-        {
-          id: 'i1',
-          title: 'Significant Sales Gap',
-          description: 'Performance is 28% below target across all product lines.',
-          metrics: [
-            { label: 'Sales Achievement', value: '72%', comparison: 'Target: 100%', trend: 'stable' }
-          ],
-          dataSource: 'Sales'
-        },
-        {
-          id: 'i2',
-          title: 'Incomplete Territory Coverage',
-          description: 'Many assigned accounts not yet contacted this quarter.',
-          metrics: [
-            { label: 'Account Coverage', value: '71%', comparison: 'Target: 90%', trend: 'up' }
-          ],
-          dataSource: 'Activity'
-        },
-        {
-          id: 'i3',
-          title: 'CRM Data Gaps',
-          description: 'Missing key information in customer records.',
-          metrics: [
-            { label: 'Data Completeness', value: '68%', comparison: 'Team avg: 78%', trend: 'stable' }
-          ],
-          dataSource: 'CRM'
-        }
-      ],
-      suggestions: [
-        {
-          id: 'sg1',
-          title: 'Intensive Onboarding Support',
-          action: 'Schedule weekly coaching sessions and shadow top performer for 3 full days.',
-          expectedOutcome: 'Accelerate learning curve and build foundational skills.',
-          priority: 'high',
-          rationale: 'New tenure requires structured support for success.',
-          timeframe: 'Next 30 days',
-          resources: 'Mentorship from Sarah Johnson'
-        },
-        {
-          id: 'sg2',
-          title: 'Product Knowledge Training',
-          action: 'Complete all core product certifications within 45 days.',
-          expectedOutcome: 'Improve confidence and effectiveness in customer conversations.',
-          priority: 'high',
-          rationale: 'Product knowledge gaps limiting sales conversations.',
-          timeframe: '45 days'
-        },
-        {
-          id: 'sg3',
-          title: 'Simplify Territory Plan',
-          action: 'Focus on top 20 accounts only for next 60 days to build momentum.',
-          expectedOutcome: 'Achieve early wins and establish consistent activity patterns.',
-          priority: 'high',
-          rationale: 'Narrower focus will enable better execution.',
-          timeframe: 'Next 60 days'
-        }
-      ],
+      improvements: [],
+      suggestions: [],
       activityData: {
         callFrequency: 22,
-        territoryCoverage: 71,
+        territoryCoverage: 73,
         meetingTypes: [
           { type: 'In-Person', count: 14 },
           { type: 'Virtual', count: 8 }
@@ -411,47 +263,23 @@ export const getRepresentativeDetails = (id: string): RepresentativeDetail | nul
       strengths: [
         {
           id: 's1',
-          title: 'Exceptional Product A Performance',
-          description: 'Leading the team in flagship product sales.',
+          title_1: "What's working well ",
+          description_1: 'Joe, first off, I want to recognize the steady progress you’ve made in driving Hemora performance across the Sacramento territory. Your total sales of 159.39 units are slightly below the West region average, but your early-year results show strong intent and solid territory execution. From January to March, your performance grew by 12.5%, reflecting your ability to maintain consistency and effectively manage customer relationships.',
+          title_2: 'What could be different',
+          description_2: 'April and May showed stable results, followed by a 26.9% increase in June, marking one of the strongest finishes across the region. This rebound demonstrates your ability to respond to performance trends and turn effort into tangible results. Continuing to build on this momentum by expanding call coverage and increasing sampling by 10–12% can help further solidify your position and bring your overall performance closer to the regional benchmark.',
+          title_3: 'Forward-looking suggestions',
+          description_3: 'You’ve built a strong foundation for growth, and your recent turnaround highlights what’s possible with focus and persistence. Maintaining this energy while deepening engagement with both established and emerging accounts will be key to sustaining progress. I am confident that with your continued drive and attention to consistency, you’ll build even stronger results ahead, and I’m here to support you every step of the way.',
           metrics: [
-            { label: 'Product A Achievement', value: '128%', comparison: 'Team avg: 102%', trend: 'up' }
-          ],
-          dataSource: 'Sales'
-        },
-        {
-          id: 's2',
-          title: 'Strategic Account Management',
-          description: 'Excellent penetration of key strategic accounts.',
-          metrics: [
-            { label: 'Strategic Account Coverage', value: '96%', comparison: 'Target: 85%', trend: 'stable' }
+            { label: 'Top 10 Account Meetings', value: '95%', comparison: 'Team avg: 72%', trend: 'up' }
           ],
           dataSource: 'Activity'
-        },
-        {
-          id: 's3',
-          title: 'Veteran Territory Knowledge',
-          description: 'Deep understanding of territory dynamics and customer needs.',
-          metrics: [
-            { label: 'Years in Territory', value: '5.1', comparison: 'Team avg: 3.5', trend: 'stable' }
-          ],
-          dataSource: 'CRM'
         }
       ],
       improvements: [],
-      suggestions: [
-        {
-          id: 'sg1',
-          title: 'Share Strategic Account Playbook',
-          action: 'Document and present strategic account approach at team meeting.',
-          expectedOutcome: 'Elevate team capabilities in managing complex accounts.',
-          priority: 'low',
-          rationale: 'Lisa\'s methods can benefit entire team.',
-          timeframe: 'Next 60 days'
-        }
-      ],
+      suggestions: [],
       activityData: {
         callFrequency: 40,
-        territoryCoverage: 96,
+        territoryCoverage: 70,
         meetingTypes: [
           { type: 'In-Person', count: 30 },
           { type: 'Virtual', count: 10 }
@@ -481,58 +309,23 @@ export const getRepresentativeDetails = (id: string): RepresentativeDetail | nul
       strengths: [
         {
           id: 's1',
-          title: 'Effective Virtual Engagement',
-          description: 'High success rate with virtual customer interactions.',
+          title_1: "What's working well ",
+          description_1: 'Robert, first off, I want to acknowledge the strong base you have built for Hemora across the Las Vegas territory. Your total sales of 206.8 units are 18.7% above the West region average of 174.28 units, which reflects steady execution and solid relationships with your key prescribers. From January to March, you grew 7.7%, and you maintained healthy volumes into late spring with a solid May performance at 39.6 units.',
+          title_2: 'What could be different',
+          description_2: 'June softened slightly to 36.3 units, an 8.3% dip versus May, which signals an opportunity to keep momentum consistent through the end of the quarter. Expanding your call reach and sampling activity by about 8 to 10% and tightening follow-ups after details can help stabilize monthly trends and strengthen conversion across mid-tier and emerging accounts.',
+          title_3: 'Forward-looking suggestions',
+          description_3: 'You are well-positioned to stay ahead of the regional average by balancing time between your reliable prescribers and newer targets. With your disciplined approach and a bit more consistency in coverage, you can extend your lead in the West region. I am confident you will continue to deliver strong results, and I am here to support you every step of the way.',
           metrics: [
-            { label: 'Virtual Meeting Success', value: '89%', comparison: 'Team avg: 75%', trend: 'up' }
+            { label: 'Top 10 Account Meetings', value: '95%', comparison: 'Team avg: 72%', trend: 'up' }
           ],
           dataSource: 'Activity'
         }
       ],
-      improvements: [
-        {
-          id: 'i1',
-          title: 'Underperformance on Product C',
-          description: 'Significantly below target on newest product line.',
-          metrics: [
-            { label: 'Product C Achievement', value: '68%', comparison: 'Target: 100%', trend: 'stable' }
-          ],
-          dataSource: 'Sales'
-        },
-        {
-          id: 'i2',
-          title: 'CRM Documentation Delays',
-          description: 'Call reports often submitted 3-5 days after customer interactions.',
-          metrics: [
-            { label: 'Timely CRM Updates', value: '79%', comparison: 'Target: 90%', trend: 'down' }
-          ],
-          dataSource: 'CRM'
-        }
-      ],
-      suggestions: [
-        {
-          id: 'sg1',
-          title: 'Product C Certification and Practice',
-          action: 'Complete advanced Product C training and practice presentations with manager.',
-          expectedOutcome: 'Increase confidence and sales effectiveness for Product C.',
-          priority: 'high',
-          rationale: 'Knowledge gap identified in customer conversations.',
-          timeframe: 'Next 30 days',
-          resources: 'Product C certification program'
-        },
-        {
-          id: 'sg2',
-          title: 'Real-Time CRM Entry Habit',
-          action: 'Use mobile CRM app to document calls immediately after meetings.',
-          expectedOutcome: 'Improve data quality and timeliness by 20%.',
-          priority: 'medium',
-          rationale: 'Fresh documentation is more accurate and actionable.',
-          timeframe: 'Immediate'
-        }
-      ],
+      improvements: [],
+      suggestions: [],
       activityData: {
         callFrequency: 34,
-        territoryCoverage: 87,
+        territoryCoverage: 74,
         meetingTypes: [
           { type: 'In-Person', count: 18 },
           { type: 'Virtual', count: 16 }
@@ -555,77 +348,6 @@ export const getRepresentativeDetails = (id: string): RepresentativeDetail | nul
         completenessScore: 79,
         interactionCount: 118,
         opportunityPipeline: 9
-      }
-    },
-    '7': {
-      ...rep,
-      strengths: [
-        {
-          id: 's1',
-          title: 'Strong New Business Development',
-          description: 'Excellent track record of opening new accounts.',
-          metrics: [
-            { label: 'New Account Revenue', value: '28%', comparison: 'Team avg: 22%', trend: 'up' }
-          ],
-          dataSource: 'Sales'
-        },
-        {
-          id: 's2',
-          title: 'Balanced Activity Distribution',
-          description: 'Optimal mix of prospecting and account maintenance activities.',
-          metrics: [
-            { label: 'Activity Balance Score', value: '89%', comparison: 'Team avg: 82%', trend: 'stable' }
-          ],
-          dataSource: 'Activity'
-        }
-      ],
-      improvements: [
-        {
-          id: 'i1',
-          title: 'Opportunity Pipeline Development',
-          description: 'Lower number of active opportunities compared to sales volume.',
-          metrics: [
-            { label: 'Active Opportunities', value: '7', comparison: 'Team avg: 10', trend: 'stable' }
-          ],
-          dataSource: 'CRM'
-        }
-      ],
-      suggestions: [
-        {
-          id: 'sg1',
-          title: 'Strengthen Pipeline Management',
-          action: 'Identify and qualify 5 new opportunities per month in existing accounts.',
-          expectedOutcome: 'Build more predictable revenue stream and reduce quarter-end pressure.',
-          priority: 'medium',
-          rationale: 'Current success rate high but volume can be improved.',
-          timeframe: 'Next 90 days'
-        }
-      ],
-      activityData: {
-        callFrequency: 37,
-        territoryCoverage: 93,
-        meetingTypes: [
-          { type: 'In-Person', count: 24 },
-          { type: 'Virtual', count: 13 }
-        ]
-      },
-      salesData: {
-        productPerformance: [
-          { product: 'Product A', achievement: 112 },
-          { product: 'Product B', achievement: 106 },
-          { product: 'Product C', achievement: 105 }
-        ],
-        accountTrends: [
-          { month: 'Jul', revenue: 172000 },
-          { month: 'Aug', revenue: 176000 },
-          { month: 'Sep', revenue: 180000 },
-          { month: 'Oct', revenue: 184000 }
-        ]
-      },
-      crmData: {
-        completenessScore: 91,
-        interactionCount: 134,
-        opportunityPipeline: 7
       }
     }
   };

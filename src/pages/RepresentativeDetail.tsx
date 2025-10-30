@@ -66,17 +66,17 @@ const RepresentativeDetail = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <BarChart3 className="w-6 h-6 text-primary-foreground" />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+                <img src="https://cdn4.iconfinder.com/data/icons/superhero/400/superman.png" className="w-15 h-15 text-foreground" />
               </div>
               <div>
-                <h1 className="text-xl font-bold">SuperCoach-M</h1>
+                <h1 className="text-xl font-bold">Super Coach</h1>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <div className="text-right hidden sm:block">
                 <p className="text-sm font-medium">{managerName}</p>
-                <p className="text-xs text-muted-foreground">Field Manager</p>
+                <p className="text-xs text-muted-foreground">West (S1100)</p>
               </div>
               <Button variant="outline" size="sm" onClick={() => { logout(); navigate('/'); }}>
                 <LogOut className="w-4 h-4 mr-2" />
@@ -129,23 +129,27 @@ const RepresentativeDetail = () => {
               <div>
                 <CardTitle className="text-2xl mb-2">{repDetail.name}</CardTitle>
                 <div className="space-y-1 text-sm text-muted-foreground">
-                  <p>{repDetail.territory}</p>
-                  <p>Tenure: {repDetail.tenure} years</p>
+                  <p>{repDetail.territory}            (S110{repDetail.id})</p>
+                  {/* <p>Tenure: {repDetail.tenure} years</p> */}
                 </div>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-4 ml-1">
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-primary">{repDetail.salesAchievement}%</p>
+                  <p className="text-2xl font-bold"></p>
+                  <p className="text-xs text-muted-foreground mt-1"></p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-bold"></p>
+                  <p className="text-xs text-muted-foreground mt-1"></p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-primary">{repDetail.salesAchievement}</p>
                   <p className="text-xs text-muted-foreground mt-1">Sales Achievement</p>
                 </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold">{repDetail.activityCompletion}%</p>
-                  <p className="text-xs text-muted-foreground mt-1">Activity Rate</p>
-                </div>
-                <div className="text-center">
+                {/* <div className="text-center">
                   <p className="text-2xl font-bold">{repDetail.crmQualityScore}%</p>
                   <p className="text-xs text-muted-foreground mt-1">CRM Quality</p>
-                </div>
+                </div> */}
                 <div className="text-center">
                   <p className="text-2xl font-bold">{repDetail.targetCoverage}%</p>
                   <p className="text-xs text-muted-foreground mt-1">Coverage</p>
@@ -159,22 +163,19 @@ const RepresentativeDetail = () => {
           <section>
             <div className="flex items-center gap-2 mb-4">
               <CheckCircle className="w-6 h-6 text-success" />
-              <h2 className="text-2xl font-bold">What's Working Well</h2>
+              <h2 className="text-2xl font-bold">Coaching Insights</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="w-full">
               {repDetail.strengths.map((insight) => (
                 <Card key={insight.id} className="border-l-4 border-l-success">
                   <CardHeader>
                     <div className="flex items-start justify-between gap-2">
-                      <CardTitle className="text-base">{insight.title}</CardTitle>
-                      <Badge variant="outline" className="text-xs">
-                        {insight.dataSource}
-                      </Badge>
+                      <CardTitle className="text-base">{insight.title_1}</CardTitle>
                     </div>
                   </CardHeader>
-                  <CardContent className="space-y-3">
-                    <p className="text-sm text-muted-foreground">{insight.description}</p>
-                    {insight.metrics.map((metric, idx) => (
+                  <CardContent className="pb-0 space-y-3">
+                    <p className="text-sm text-muted-foreground">{insight.description_1}</p>
+                    {/* {insight.metrics.map((metric, idx) => (
                       <div key={idx} className="space-y-1">
                         <div className="flex items-center justify-between">
                           <span className="text-sm font-medium">{metric.label}</span>
@@ -185,86 +186,35 @@ const RepresentativeDetail = () => {
                           <p className="text-xs text-muted-foreground">{metric.comparison}</p>
                         )}
                       </div>
-                    ))}
+                    ))} */}
                   </CardContent>
-                </Card>
-              ))}
-            </div>
-          </section>
-
-          {repDetail.improvements.length > 0 && (
-            <section>
-              <div className="flex items-center gap-2 mb-4">
-                <AlertCircle className="w-6 h-6 text-warning" />
-                <h2 className="text-2xl font-bold">What Can Be Different</h2>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {repDetail.improvements.map((insight) => (
-                  <Card key={insight.id} className="border-l-4 border-l-warning">
-                    <CardHeader>
-                      <div className="flex items-start justify-between gap-2">
-                        <CardTitle className="text-base">{insight.title}</CardTitle>
-                        <Badge variant="outline" className="text-xs">
-                          {insight.dataSource}
-                        </Badge>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="space-y-3">
-                      <p className="text-sm text-muted-foreground">{insight.description}</p>
-                      {insight.metrics.map((metric, idx) => (
-                        <div key={idx} className="space-y-1">
-                          <div className="flex items-center justify-between">
-                            <span className="text-sm font-medium">{metric.label}</span>
-                            {metric.trend && getTrendIcon(metric.trend)}
-                          </div>
-                          <p className="text-lg font-bold text-warning">{metric.value}</p>
-                          {metric.comparison && (
-                            <p className="text-xs text-muted-foreground">{metric.comparison}</p>
-                          )}
-                        </div>
-                      ))}
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </section>
-          )}
-
-          <section>
-            <div className="flex items-center gap-2 mb-4">
-              <Lightbulb className="w-6 h-6 text-info" />
-              <h2 className="text-2xl font-bold">Suggestions</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {repDetail.suggestions.map((suggestion) => (
-                <Card key={suggestion.id} className="border-l-4 border-l-info">
                   <CardHeader>
                     <div className="flex items-start justify-between gap-2">
-                      <CardTitle className="text-base">{suggestion.title}</CardTitle>
-                      <Badge className={getPriorityColor(suggestion.priority)}>
-                        {suggestion.priority.toUpperCase()}
-                      </Badge>
+                      <CardTitle className="text-base">{insight.title_2}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pb-0 space-y-3">
+                    <p className="text-sm text-muted-foreground">{insight.description_2}</p>
+                    {/* {insight.metrics.map((metric, idx) => (
+                      <div key={idx} className="space-y-1">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm font-medium">{metric.label}</span>
+                          {metric.trend && getTrendIcon(metric.trend)}
+                        </div>
+                        <p className="text-lg font-bold text-success">{metric.value}</p>
+                        {metric.comparison && (
+                          <p className="text-xs text-muted-foreground">{metric.comparison}</p>
+                        )}
+                      </div>
+                    ))} */}
+                  </CardContent>
+                  <CardHeader>
+                    <div className="flex items-start justify-between gap-2">
+                      <CardTitle className="text-base">{insight.title_3}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-3">
-                    <div>
-                      <p className="text-sm font-medium mb-1">Action:</p>
-                      <p className="text-sm text-muted-foreground">{suggestion.action}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium mb-1">Expected Outcome:</p>
-                      <p className="text-sm text-muted-foreground">{suggestion.expectedOutcome}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium mb-1">Rationale:</p>
-                      <p className="text-sm text-muted-foreground">{suggestion.rationale}</p>
-                    </div>
-                    {suggestion.timeframe && (
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                        <span className="font-medium">Timeline:</span>
-                        <span>{suggestion.timeframe}</span>
-                      </div>
-                    )}
+                  <p className="text-sm text-muted-foreground">{insight.description_3}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -278,10 +228,8 @@ const RepresentativeDetail = () => {
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="activity">
-              <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="activity">Activity</TabsTrigger>
-                <TabsTrigger value="sales">Sales</TabsTrigger>
-                <TabsTrigger value="crm">CRM</TabsTrigger>
+              <TabsList className="w-full">
+                <TabsTrigger value="activity" className="w-full">Activity</TabsTrigger>
               </TabsList>
               
               <TabsContent value="activity" className="space-y-4 mt-4">
@@ -297,7 +245,7 @@ const RepresentativeDetail = () => {
                   </Card>
                   <Card>
                     <CardHeader>
-                      <CardTitle className="text-sm">Territory Coverage</CardTitle>
+                      <CardTitle className="text-sm">Coverage</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-2xl font-bold">{repDetail.activityData.territoryCoverage}%</p>
@@ -313,47 +261,6 @@ const RepresentativeDetail = () => {
                         <div key={type.type} className="flex justify-between text-sm">
                           <span>{type.type}</span>
                           <span className="font-semibold">{type.count}</span>
-                        </div>
-                      ))}
-                    </CardContent>
-                  </Card>
-                </div>
-              </TabsContent>
-
-              <TabsContent value="sales" className="space-y-4 mt-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="text-sm">Product Performance</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-3">
-                      {repDetail.salesData.productPerformance.map((product) => (
-                        <div key={product.product} className="space-y-1">
-                          <div className="flex justify-between text-sm">
-                            <span>{product.product}</span>
-                            <span className="font-semibold">{product.achievement}%</span>
-                          </div>
-                          <div className="w-full bg-muted rounded-full h-2">
-                            <div
-                              className="h-2 rounded-full bg-primary"
-                              style={{ width: `${Math.min(product.achievement, 100)}%` }}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="text-sm">Account Trends (Last 4 Months)</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-2">
-                      {repDetail.salesData.accountTrends.map((trend) => (
-                        <div key={trend.month} className="flex justify-between text-sm">
-                          <span>{trend.month}</span>
-                          <span className="font-semibold">
-                            ${(trend.revenue / 1000).toFixed(0)}K
-                          </span>
                         </div>
                       ))}
                     </CardContent>

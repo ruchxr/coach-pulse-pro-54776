@@ -13,8 +13,12 @@ export interface Representative {
 
 export interface Insight {
   id: string;
-  title: string;
-  description: string;
+  title_1: string;
+  description_1: string;
+  title_2: string;
+  description_2: string,
+  title_3: string;
+  description_3: string;
   metrics: {
     label: string;
     value: string;

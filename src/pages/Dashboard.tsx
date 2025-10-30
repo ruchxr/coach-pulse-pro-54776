@@ -36,7 +36,7 @@ const Dashboard = () => {
   };
 
   const teamAvgSales = Math.round(
-    mockRepresentatives.reduce((sum, rep) => sum + rep.salesAchievement, 0) / mockRepresentatives.length
+    mockRepresentatives.reduce((sum, rep) => sum + rep.salesAchievement, 0) / 13
   );
 
   return (
@@ -44,18 +44,18 @@ const Dashboard = () => {
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <BarChart3 className="w-6 h-6 text-primary-foreground" />
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+              <img src="https://cdn4.iconfinder.com/data/icons/superhero/400/superman.png" className="w-15 h-15 text-foreground" />
             </div>
             <div>
-              <h1 className="text-xl font-bold">SuperCoach-M</h1>
+              <h1 className="text-xl font-bold">Super Coach</h1>
               <p className="text-sm text-muted-foreground">My Team Overview</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="text-right hidden sm:block">
               <p className="text-sm font-medium">{managerName}</p>
-              <p className="text-xs text-muted-foreground">Field Manager</p>
+              <p className="text-xs text-muted-foreground">West (S1100)</p>
             </div>
             <Button variant="outline" size="sm" onClick={handleLogout}>
               <LogOut className="w-4 h-4 mr-2" />
@@ -124,36 +124,31 @@ const Dashboard = () => {
                     <CardTitle className="text-lg">{rep.name}</CardTitle>
                     <p className="text-sm text-muted-foreground mt-1">{rep.territory}</p>
                   </div>
-                  <Badge className={getStatusColor(rep.status)}>
+                  {/* <Badge className={getStatusColor(rep.status)}>
                     {rep.status.toUpperCase()}
-                  </Badge>
+                  </Badge> */}
                 </div>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-muted-foreground">Sales Achievement</span>
-                    <span className={`text-sm font-semibold ${rep.salesAchievement >= 100 ? 'text-success' : rep.salesAchievement >= 85 ? 'text-warning' : 'text-destructive'}`}>
-                      {rep.salesAchievement}%
+                    <span className={`text-sm font-semibold ${rep.salesAchievement >= 30 ? 'text-info' : rep.salesAchievement >= 85 ? 'text-warning' : 'text-destructive'}`}>
+                      {rep.salesAchievement / 5}%
                     </span>
                   </div>
                   <div className="w-full bg-muted rounded-full h-2">
                     <div
-                      className={`h-2 rounded-full ${rep.salesAchievement >= 100 ? 'bg-success' : rep.salesAchievement >= 85 ? 'bg-warning' : 'bg-destructive'}`}
-                      style={{ width: `${Math.min(rep.salesAchievement, 100)}%` }}
+                      className={`h-2 rounded-full ${rep.salesAchievement >= 30 ? 'bg-info' : rep.salesAchievement >= 20 ? 'bg-warning' : 'bg-destructive'}`}
+                      style={{ width: `${Math.min(rep.salesAchievement / 5, 100)}%` }}
                     />
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Activity Rate</span>
-                  <span className="text-sm font-semibold">{rep.activityCompletion}%</span>
-                </div>
-
-                <div className="flex justify-between items-center">
+                {/* <div className="flex justify-between items-center">
                   <span className="text-sm text-muted-foreground">CRM Quality</span>
                   <span className="text-sm font-semibold">{rep.crmQualityScore}%</span>
-                </div>
+                </div> */}
 
                 <Button variant="outline" className="w-full mt-2">
                   View Details

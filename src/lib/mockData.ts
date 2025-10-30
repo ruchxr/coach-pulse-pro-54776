@@ -3,80 +3,87 @@ import { Representative, RepresentativeDetail } from '@/types';
 export const mockRepresentatives: Representative[] = [
   {
     id: '1',
-    name: 'Sarah Johnson',
-    territory: 'Northeast Region',
-    salesAchievement: 118,
+    name: 'Jennifer Martinez',
+    territory: 'Seattle Metro',
+    salesAchievement: 132,
     activityCompletion: 95,
     crmQualityScore: 92,
     status: 'green',
     tenure: 4.5,
-    targetCoverage: 98
+    targetCoverage: 98,
+    consolidatedInsight: "Jennifer, first off, I want to acknowledge your strong performance in maintaining Hemora sales across the Seattle territory. Despite fluctuations across the West region, you have shown consistent strength and discipline in driving results. Your total sales of 229.9 units are 31.7% above the regional average, which is commendable. The steady growth from 33 units in January to 42.9 units in May, an increase of 30%, highlights your ability to build lasting customer relationships and translate effort into tangible outcomes.\n\nI also noticed a slight dip in June sales, from 42.9 to 35.2 units, which presents an opportunity to sustain momentum through the later months of the quarter. Expanding your call reach by around 10–15% and maintaining follow-up cadence with emerging accounts can help stabilize growth and maintain consistency. This focus on proactive engagement will ensure your territory continues to perform strongly even when market dynamics shift.\n\nYou have set a solid standard for performance within the West region, and your dedication is clearly paying off. As you continue to build on this foundation, maintaining a balance between nurturing established accounts and expanding outreach to newer prescribers will be key. I am confident that with your focus and consistency, you will continue to excel, and I am here to support you every step of the way."
   },
   {
     id: '2',
     name: 'Michael Chen',
-    territory: 'West Coast',
-    salesAchievement: 87,
-    activityCompletion: 78,
+    territory: 'Portland Region',
+    salesAchievement: 118,
+    activityCompletion: 92,
     crmQualityScore: 85,
-    status: 'yellow',
+    status: 'green',
     tenure: 2.8,
-    targetCoverage: 82
+    targetCoverage: 82,
+    consolidatedInsight: "Michael, your performance in the Portland Region continues to demonstrate excellence across multiple dimensions. Your sales achievement of 118% against target, combined with a 92% activity completion rate, shows strong execution and commitment to your territory. Keep leveraging your systematic approach to account management—it's clearly driving results."
   },
   {
     id: '3',
-    name: 'Emily Rodriguez',
-    territory: 'Southeast',
-    salesAchievement: 105,
+    name: 'Sarah Williams',
+    territory: 'San Francisco Bay',
+    salesAchievement: 98,
     activityCompletion: 88,
     crmQualityScore: 90,
-    status: 'green',
+    status: 'yellow',
     tenure: 3.2,
-    targetCoverage: 94
+    targetCoverage: 94,
+    consolidatedInsight: "Sarah, you're performing solidly in the competitive San Francisco Bay market. While you're slightly below target at 98%, your consistent activity rate of 88% demonstrates dedication. Focus on converting more of your customer interactions into sales opportunities, particularly with high-potential accounts in the biotech corridor."
   },
   {
     id: '4',
     name: 'David Thompson',
-    territory: 'Midwest',
-    salesAchievement: 72,
-    activityCompletion: 65,
+    territory: 'Los Angeles Metro',
+    salesAchievement: 105,
+    activityCompletion: 85,
     crmQualityScore: 68,
-    status: 'red',
+    status: 'yellow',
     tenure: 1.5,
-    targetCoverage: 71
+    targetCoverage: 71,
+    consolidatedInsight: "David, you're exceeding your sales target at 105% in the challenging LA Metro territory. Your results speak to your ability to navigate a complex market. I'd like to see your CRM quality score improve from 68% to ensure we're capturing all customer insights that could drive even stronger performance."
   },
   {
     id: '5',
-    name: 'Lisa Park',
-    territory: 'Southwest',
-    salesAchievement: 112,
-    activityCompletion: 91,
-    crmQualityScore: 88,
-    status: 'green',
+    name: 'Emily Rodriguez',
+    territory: 'San Diego County',
+    salesAchievement: 78,
+    activityCompletion: 82,
+    crmQualityScore: 91,
+    status: 'red',
     tenure: 5.1,
-    targetCoverage: 96
+    targetCoverage: 96,
+    consolidatedInsight: "Emily, I want to acknowledge your outstanding CRM quality at 91%—you're setting the standard for the team. However, your sales achievement at 78% indicates we need to work together on converting your strong organizational skills into more sales results. Let's schedule time to review your account strategy and identify key opportunities."
   },
   {
     id: '6',
     name: 'James Wilson',
-    territory: 'Mountain States',
-    salesAchievement: 94,
-    activityCompletion: 83,
-    crmQualityScore: 79,
-    status: 'yellow',
+    territory: 'Sacramento Valley',
+    salesAchievement: 115,
+    activityCompletion: 90,
+    crmQualityScore: 86,
+    status: 'green',
     tenure: 3.7,
-    targetCoverage: 87
+    targetCoverage: 87,
+    consolidatedInsight: "James, excellent work in Sacramento Valley. Your 115% sales achievement combined with 90% activity completion shows you're maximizing every customer interaction. Your balanced approach to territory management is exactly what we want to see. Keep up the momentum and continue sharing your best practices with the team."
   },
   {
     id: '7',
-    name: 'Amanda Foster',
-    territory: 'Mid-Atlantic',
-    salesAchievement: 108,
-    activityCompletion: 89,
+    name: 'Lisa Anderson',
+    territory: 'Orange County',
+    salesAchievement: 92,
+    activityCompletion: 87,
     crmQualityScore: 91,
-    status: 'green',
+    status: 'yellow',
     tenure: 4.0,
-    targetCoverage: 93
+    targetCoverage: 93,
+    consolidatedInsight: "Lisa, you're showing solid, steady performance in Orange County with 92% sales achievement. Your activity completion at 87% is good, and I see opportunities to push toward excellence by focusing on key account penetration and increasing face-time with top-tier prescribers. Let's discuss strategies to close that gap to target."
   }
 ];
 

@@ -49,7 +49,7 @@ const Dashboard = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold">Super Coach</h1>
-              <p className="text-sm text-muted-foreground">My Team Overview</p>
+              <p className="text-sm text-muted-foreground">Team Overview</p>
             </div>
           </div>
           <div className="flex items-center gap-4">

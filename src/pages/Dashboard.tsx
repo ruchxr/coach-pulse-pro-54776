@@ -3,16 +3,13 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { mockRepresentatives } from '@/lib/mockData';
 import { BarChart3, LogOut, TrendingUp, Users, Target } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import type { Representative } from '@/types';
+import { useEffect } from 'react';
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const { isAuthenticated, managerName, logout } = useAuth();
-  const [selectedRep, setSelectedRep] = useState<Representative | null>(null);
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -124,15 +121,7 @@ const Dashboard = () => {
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div>
-                    <CardTitle 
-                      className="text-lg hover:text-primary transition-colors cursor-pointer"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setSelectedRep(rep);
-                      }}
-                    >
-                      {rep.name}
-                    </CardTitle>
+                    <CardTitle className="text-lg">{rep.name}</CardTitle>
                     <p className="text-sm text-muted-foreground mt-1">{rep.territory}</p>
                   </div>
                   <Badge className={getStatusColor(rep.status)}>
@@ -179,22 +168,6 @@ const Dashboard = () => {
           <p className="mt-1">SuperCoach-M v1.0</p>
         </footer>
       </main>
-
-      <Dialog open={!!selectedRep} onOpenChange={() => setSelectedRep(null)}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="text-2xl">Consolidated Coaching Insight</DialogTitle>
-            <p className="text-sm text-muted-foreground mt-1">{selectedRep?.name} - {selectedRep?.territory}</p>
-          </DialogHeader>
-          <div className="mt-4">
-            <div className="prose prose-sm max-w-none">
-              <p className="text-foreground whitespace-pre-line leading-relaxed">
-                {selectedRep?.consolidatedInsight}
-              </p>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 };

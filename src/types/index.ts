@@ -9,7 +9,6 @@ export interface Representative {
   status: 'green' | 'yellow' | 'red';
   tenure: number;
   targetCoverage: number;
-  consolidatedInsight: string;
 }
 
 export interface Insight {
